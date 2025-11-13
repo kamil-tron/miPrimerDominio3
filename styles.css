@@ -178,3 +178,59 @@ h1 {
 .formulario button:hover {
   background-color: darkred;
 }
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: rgb(37, 34, 34);
+  color: white;
+  padding: 40px 60px 20px;
+  margin-top: 80px;
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer h3 {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-logos .logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-logos img {
+  width: 150px;
+  height: 100px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logos img:hover {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0);
+}
+
+.footer-privacidad p {
+  margin-bottom: 10px;
+}
+
+.footer-copy {
+  text-align: center;
+  border-top: 1px solid #555;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+a:link {
+  color: white;
+}
