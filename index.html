@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="topheader">
+      <div class="logo-container">
+        <a href="#" class="logo">
+          <img
+            src="imagen/pngwing.com.png"
+            alt="Logo de YouTube"
+            height="45"
+            style="width: auto"
+          />
+        </a>
+        <h1>YouTube</h1>
+      </div>
+
+      <ul class="Menu-horizontal">
+        <li><a href="">Productos</a></li>
+        <li>
+          <a href="">Servicios</a>
+          <ul class="Menu-vertical">
+            <li><a href="">eso</a></li>
+            <li><a href="">vamos</a></li>
+            <li><a href="">tilin</a></li>
+            <li><a href="">Banca</a></li>
+          </ul>
+        </li>
+        <li><a href="">Contáctanos</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+  
+      <section class="seccion-flex">
+        <div class="texto">
+          <h2>¿Qué es YouTube?</h2>
+          <p>
+            Es un canal de referencia para millones de usuarios con el que crear contenido y que puede usarse en ordenadores, tablets y dispositivos móviles. 
+            Pertenece a Google desde 2006. YouTube es una plataforma a través de la que reproducir vídeos, subir contenido a un canal propio e interactuar con el resto de usuarios mediante likes, comentarios o ‘compartir’.
+          </p>
+        </div>
+        <div class="imagen">
+          <img src="imagen/youtuberewaind.jpg" alt="Imagen EnYouTube" />
+        </div>
+      </section>
+
+      <!-- Sección 2: En YouTube -->
+      <section class="seccion-flex">
+        <div class="texto">
+          <h2>En YouTube</h2>
+          <p>
+            Puedes ver y compartir los videos que más te gustan, donde puedes ser tú mismo y la creatividad no tiene límite.
+          </p>
+        </div>
+
+        <div class="youtube">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/OIuG1bBkfs0?si=uFBj3GV0URz0hCt0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <section class="formulario">
+      <h2>Crear una cuenta</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre:</label><br />
+        <input type="text" id="nombre" name="nombre" /><br /><br />
+
+        <label for="correo">Correo electrónico:</label><br />
+        <input type="text" id="correo" name="correo" /><br /><br />
+
+        <label>Sexo:</label><br />
+        <input type="radio" id="masculino" name="sexo" value="masculino" />
+        <label for="masculino">Masculino</label><br />
+        <input type="radio" id="femenino" name="sexo" value="femenino" />
+        <label for="femenino">Femenino</label><br /><br />
+
+        <button type="submit
