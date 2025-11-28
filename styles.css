@@ -14,7 +14,7 @@ h1 {
   font-weight: bold;
 }
 
-.topheader {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -98,10 +98,10 @@ h1 {
   padding-top: 120px;
 }
 
-/* Cada bloque con texto + imagen o video */
+
 .seccion-flex {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 50px 80px;
   gap: 50px;
@@ -124,14 +124,30 @@ h1 {
   line-height: 1.6;
 }
 
+.imagen {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+}
+
 .imagen img {
-  width: 560px;
+  width: 100%;
+  max-width: 760px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
+.youtube {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+}
+
 .youtube iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
@@ -158,7 +174,7 @@ h1 {
 
 .formulario input[type="text"],
 .formulario input[type="email"] {
-  width: 100%;
+  width: 93%;
   padding: 8px;
   margin-top: 4px;
   border: 1px solid #ccc;
@@ -180,57 +196,166 @@ h1 {
 }
 /* ---------- FOOTER ---------- */
 .footer {
-  background-color: rgb(37, 34, 34);
+  background-color: rgb(20, 20, 20);
   color: white;
-  padding: 40px 60px 20px;
+  padding: 36px 50px 18px;
   margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.45);
 }
 
 .footer-contenido {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
+  gap: 50px;
 }
 
-.footer h3 {
-  color: red;
-  margin-bottom: 15px;
+.footer-column {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer-column h3 {
+  color: #ff4d4d;
+  margin-bottom: 18px;
   font-size: 20px;
 }
 
-.footer-logos .logos {
+.footer-column p {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ff4d4d;
+}
+
+.footer-social {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.footer-logos img {
+.footer-social img {
   width: 150px;
   height: 100px;
   filter: brightness(0) invert(1);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer-logos img:hover {
-  transform: scale(1.1);
+.footer-social img:hover {
+  transform: scale(1.05);
   filter: brightness(1) invert(0);
 }
 
-.footer-privacidad p {
-  margin-bottom: 10px;
+.btn-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-pdf:hover {
+  background: #ff4d4d;
+  transform: translateY(-1px);
 }
 
 .footer-copy {
   text-align: center;
-  border-top: 1px solid #555;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 30px;
-  padding-top: 15px;
+  padding-top: 12px;
   font-size: 14px;
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-a:link {
-  color: white;
+.footer-copy p {
+  margin: 0;
+}
+/*RESPONSIVE	*/
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .logo-container {
+    position: static;
+  }
+
+  .contenido {
+    padding-top: 150px;
+  }
+
+  .seccion-flex {
+    padding: 40px 30px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Menu-horizontal {
+    width: 100%;
+  }
+
+  .seccion-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto p {
+    text-align: justify;
+  }
+
+  .imagen img,
+  .youtube iframe {
+    max-width: 100%;
+  }
+
+  .formulario {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .footer {
+    padding: 32px 24px 16px;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-column {
+    min-width: 100%;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
 }

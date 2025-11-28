@@ -3,123 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML + CSS</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="login.css" />
   </head>
+
   <body>
-    <nav class="topheader">
-      <div class="logo-container">
-        <a href="#" class="logo">
-          <img
-            src="imagen/pngwing.com.png"
-            alt="Logo de YouTube"
-            height="45"
-            style="width: auto"
-          />
-        </a>
-        <h1>YouTube</h1>
+    <section class="login-container">
+      <div class="login-box">
+        <h2>
+            Hora De Logearse
+          <img src="imagen/YOU.png" alt="Logo" class="header-icon" />
+        </h2>
+      
+        <form onsubmit="return validarLogin(event);">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Introduce tu email"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Clave de Acceso(ok)</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Introduce la clave secreta"
+              required
+            />
+          </div>
+
+          <button type="submit" class="login-button">Iniciar Sesión</button>
+        </form>
       </div>
-
-      <ul class="Menu-horizontal">
-        <li><a href="">Productos</a></li>
-        <li>
-          <a href="">Servicios</a>
-          <ul class="Menu-vertical">
-            <li><a href="">Videos</a></li>
-            <li><a href="">Descubre</a></li>
-            <li><a href="">Youtubers</a></li>
-            <li><a href="">Rewind</a></li>
-          </ul>
-        </li>
-        <li><a href="">Contáctanos</a></li>
-      </ul>
-    </nav>
-
-    <main class="contenido">
-      <section class="seccion-flex">
-        <div class="texto">
-          <h2>¿Qué es YouTube?</h2>
-          <p>
-            Es un canal de referencia para millones de usuarios con el que crear
-            contenido y que puede usarse en ordenadores, tablets y dispositivos
-            móviles. Pertenece a Google desde 2006. YouTube es una plataforma a
-            través de la que reproducir vídeos, subir contenido a un canal
-            propio e interactuar con el resto de usuarios mediante likes,
-            comentarios o compartir.
-          </p>
-        </div>
-        <div class="imagen">
-          <img src="imagen/youtuberewaind.jpg" alt="Imagen EnYouTube" />
-        </div>
-      </section>
-
-      <!-- Sección 2: En YouTube -->
-      <section class="seccion-flex">
-        <div class="texto">
-          <h2>En YouTube</h2>
-          <p>
-            Puedes ver y compartir los videos que más te gustan, donde puedes
-            ser tú mismo y la creatividad no tiene límite.
-          </p>
-        </div>
-
-        <div class="youtube">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/OIuG1bBkfs0?si=uFBj3GV0URz0hCt0"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
-    </main>
-
-    <section class="formulario">
-      <h2>Crear una cuenta</h2>
-      <form action="#" method="post">
-        <label for="nombre">Nombre:</label><br />
-        <input type="text" id="nombre" name="nombre" /><br /><br />
-
-        <label for="correo">Correo electrónico:</label><br />
-        <input type="text" id="correo" name="correo" /><br /><br />
-
-        <label>Sexo:</label><br />
-        <input type="radio" id="masculino" name="sexo" value="masculino" />
-        <label for="masculino">Masculino</label><br />
-        <input type="radio" id="femenino" name="sexo" value="femenino" />
-        <label for="femenino">Femenino</label><br /><br />
-
-        <button type="submit">Crear cuenta</button>
-      </form>
     </section>
+
+    <script src="login.js"></script>
   </body>
-  <footer class="footer">
-    <div class="footer-contenido">
-      <!-- Sección de logos -->
-      <div class="footer-logos">
-        <h3>Síguenos</h3>
-        <div class="logos">
-          <a href="#">
-            <img src="imagen/pngwing.com (1).png" alt="Logos" />
-          </a>
-        </div>
-      </div>
-
-      <!-- Sección de privacidad -->
-      <div class="footer-privacidad">
-        <h3>Política de Privacidad</h3>
-        <a href="imagen/obtenerDocumento.pdf" target="_blank" class="btn-pdf">
-          Ley de protección de datos
-        </a>
-      </div>
-    </div>
-
-    <div class="footer-copy">
-      <p>© 2025 YouTube Demo. Todos los derechos reservados.</p>
-    </div>
-  </footer>
 </html>
